@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark" style="background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%) !important;
+    height: 100vh !important;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;">
+    </nav>
+    <div class="container">
+        <button id="offanim">Pause/Play</button>
+        <div class="container py-3">
+            <!-- <img width="96" height="96" src="https://img.icons8.com/emoji/96/melting-face-emoji.png" alt="melting-face-emoji"/>
+            <img width="96" height="96" src="https://img.icons8.com/emoji/96/hot-face.png" alt="hot-face"/>
+            <img width="96" height="96" src="https://img.icons8.com/emoji/96/sneezing-face.png" alt="sneezing-face"/>
+            <img width="96" height="96" src="https://img.icons8.com/emoji/96/cold-face.png" alt="cold-face"/> -->
+            <header>
+                
+                <div class="pricing-header mt-5 p-3 pb-md-4 mx-auto text-center">
+                    <img style=" margin-top: -95px; margin:auto; display: block;" class="animate-bounce" id="weath"
+                        src="https://img.icons8.com/?size=100&id=zIVmoh4T8wh7&format=png" />
+                    <h1 class="display-3 fw-bold text-body-emphasis">
+                        Weather
+                    </h1>
+                    
+                </div>
+            </header>
+            <form class="d-flex mx-auto" id="form1" role="search">
+                <input class="me-2 rounded-4 border-warning" id="search"  type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn text-bg-warning shadow-sm rounded-4" type="submit" id="smbtn">
+                    Search
+                </button>
+            </form>
+            <main style="margin-top: 10vh;">
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                    <div class="col position-relative">
+                        <img width="96" height="96" src="https://img.icons8.com/emoji/96/sweat-droplets.png" class="animate-bounce" alt="sweat-droplets" id="humidicon"/>
+                        <div class="card mb-4 rounded-3 shadow-md">
+                            <div class="card-header py-3 text-bg-warning border-warning">
+                                <h4 class="my-0 fw-normal">Humidity</h4>
+                            </div>
+                            <div class="card-body" style="height: 200px">
+                                <h1 id="humid" class="card-title pricing-card-title" style="font-size: 96px;">0
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col position-relative">
+                        <img width="100" height="100" src="https://img.icons8.com/emoji/96/question-mark-emoji.png" class="animate-bounce" alt="question-mark-emoji" id="temperatureicon"/>
+                        <div class="card mb-4 rounded-3 shadow-sm border-warning">
+                            <div class="card-header py-3 text-bg-warning border-warning">
+                                <h4 class="my-0 fw-normal">Temprature</h4>
+                            </div>
+                            <div class="card-body" style="height: 200px">
+                                <h1 id="temp" class="card-title pricing-card-title" style="font-size: 96px;">0
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col position-relative">
+                        <img width="90" height="90" class="animate-bounce" src="https://img.icons8.com/fluency/96/wind.png" alt="wind" id="windicon"/>
+            <!-- <img width="100" height="100" src="https://img.icons8.com/color/96/air-element.png"id="windicon" alt="air-element"/> -->
+            <div class="card mb-4 rounded-3 shadow-sm" >
+                            <div class="card-header py-3 text-bg-warning border-warning">
+                                <h4 class="my-0 fw-normal">Wind Speed</h4>
+                            </div>
+                            <div class="card-body" style="height: 200px">
+                                <h1 class="card-title pricing-card-title" style="font-size: 96px;" id="wind">0</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
