@@ -100,3 +100,31 @@
 #search:active{
     outline: none;
 }
+@media(max-width: 620px){
+    
+    #form1{
+        
+        /* max-width: 1000px !important; */
+        width: 100%;
+    }
+    .iconsize{
+        width: 48px;
+        height: 46px;
+        animation-name: hover2;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function:ease;
+    }
+    @keyframes hover2 {
+    0%   {margin-top:5px; rotate: 0deg;}
+    50%  {margin-top:15px;rotate: 3deg;}
+    75%  {margin-top:15px;rotate: -3deg;}
+    100%  {margin-top:5px;rotate: 0deg;}
+
+}
+#offanim {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

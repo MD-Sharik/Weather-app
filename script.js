@@ -5,6 +5,8 @@ const searchbtn = document.getElementById("smbtn");
 const temprature = document.getElementById("temp");
 const Wind = document.getElementById("wind");
 const animation = document.getElementById("offanim");
+const humidIcon = document.getElementById("humidicon")
+const windIcon = document.getElementById("windicon")
 
 
 const options = {
@@ -35,6 +37,20 @@ fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`, op
 		temperatureIcon.src = "https://img.icons8.com/emoji/96/cold-face.png"
 	}
 	else temperatureIcon.src = "https://img.icons8.com/emoji/96/question-mark-emoji.png"
+	
+	if(response.humidity > 80){
+		humidIcon.src = "https://img.icons8.com/emoji/96/water-wave.png"
+	}
+	
+	else if(response.humidity > 30){
+		humidIcon.src = "https://img.icons8.com/emoji/96/beach-with-umbrella.png"
+	}
+
+	if(response.wind_speed > 3){
+		windIcon.src = "https://img.icons8.com/emoji/96/tornado-emoji.png"
+	}
+
+	"https://img.icons8.com/emoji/96/tornado-emoji.png"
 	
 }).catch(err=>console.error(err))
 }
