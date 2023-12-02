@@ -96,20 +96,21 @@
     border: solid 1px rgb(142, 201, 225);
     outline: none;
 }
+.iconsize{
+    right: 0px !important;}
 
 #search:active{
     outline: none;
 }
-@media(max-width: 620px){
+@media(max-width: 1199px){
     
     #form1{
-        
-        /* max-width: 1000px !important; */
         width: 100%;
     }
     .iconsize{
         width: 48px;
         height: 46px;
+        right: 0px !important;
         animation-name: hover2;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
@@ -122,9 +123,25 @@
     100%  {margin-top:5px;rotate: 0deg;}
 
 }
+.iconsize{
+    right: 0px !important;
+}
 #offanim {
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
   }
 }
+@media(max-width: 991px){
+    .iconsize{
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        right: 0px !important;
+    }}
+@media(max-width: 1200px){
+    .iconsize{
+        width: 66px;
+        height: 66px;
+        right: 0px !important;
+    }}

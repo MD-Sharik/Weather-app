@@ -21,22 +21,22 @@ const postData = (city)=>{
 
 fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`, options).then(response=> response.json()).then(response=>{
 	console.log(response);
-	humid.innerText = response.humidity || "💀"
-	temprature.innerText = response.temp || "💀"
-	Wind.innerText = response.wind_speed || "💀"
+	humid.innerText = response.humidity || "0"
+	temprature.innerText = response.temp || "0"
+	Wind.innerText = response.wind_speed|| "0"
 
 	if(response.temp > 35){
-		temperatureIcon.src = "https://img.icons8.com/emoji/96/hot-face.png"
+		temperatureIcon.src = "https://img.icons8.com/3d-fluency/188/hot-face-1.png"
 	}
 	else if(response.temp >  24){
-		temperatureIcon.src = "https://img.icons8.com/emoji/96/melting-face-emoji.png"
+		temperatureIcon.src = "https://img.icons8.com/3d-fluency/118/melting-face-2.png"
 	}
-	else if(response.temp >  14){
-		temperatureIcon.src = "https://img.icons8.com/emoji/96/sneezing-face.png"
+	else if(response.temp >  0){
+		temperatureIcon.src = "https://img.icons8.com/3d-fluency/118/sneezing-face-1.png"
 	}else if (response.temp != undefined){
-		temperatureIcon.src = "https://img.icons8.com/emoji/96/cold-face.png"
+		temperatureIcon.src = "https://img.icons8.com/3d-fluency/188/cold-face-1.png"
 	}
-	else temperatureIcon.src = "https://img.icons8.com/emoji/96/question-mark-emoji.png"
+	else temperatureIcon.src = "https://img.icons8.com/emoji/192/question-mark-emoji.png"
 	
 	if(response.humidity > 80){
 		humidIcon.src = "https://img.icons8.com/emoji/96/water-wave.png"
@@ -48,6 +48,8 @@ fetch(`https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`, op
 
 	if(response.wind_speed > 3){
 		windIcon.src = "https://img.icons8.com/emoji/96/tornado-emoji.png"
+	}else{
+		windIcon.src = "https://img.icons8.com/3d-fluency/118/wind-turbine.png"
 	}
 
 	"https://img.icons8.com/emoji/96/tornado-emoji.png"
